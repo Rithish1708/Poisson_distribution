@@ -1,5 +1,4 @@
-# EXP 2 : Fitting Poisson distribution
-# DATE : 22 / 05 / 2025
+# Fitting Poisson  distribution
 # Aim : 
 
 To fit poisson distribution for the arrival of objects per minute from the feeder
@@ -30,15 +29,16 @@ The Poisson distribution is the discrete probability distribution of the number 
 ![image](https://user-images.githubusercontent.com/103921593/230282876-f4a5afbf-cac1-4648-a1b0-c78840638a8e.png)
 
 # Program :
-```
-Developed by : Sanjay kumar.B
-Register number : 24000581
+
+DEVELOPED BY:RITHISH R
+
+REGISTER NO:212224040278
 ```
 
-```
 import numpy as np
 import math
-import scipy.stats
+from scipy import stats
+import scipy # Import the scipy module
 L=[int(i) for i in input().split()]
 N=len(L); M=max(L) 
 X=list();f=list()
@@ -65,19 +65,19 @@ for x in range(M+1):
 print("--------------------------")
 cal_chi2_sq=np.sum(xi)
 print("Calculated value of Chi square is %4.2f"%cal_chi2_sq)
-table_chi2=scipy.stats.chi2.ppf(1-.01,df=M)
+table_chi2=scipy.stats.chi2.ppf(1-.01,df=M) # Now you can use scipy.stats.chi2.ppf
 print("Table value of chi square at 1 level is %4.2f"%table_chi2)
 if cal_chi2_sq<table_chi2:
     print("The given data can be fitted in poisson Distribution at 1% LOS")
 else:
     print("The given data cannot be fitted in Poisson Distribution at 1% LOS")
+
+
 ```
- 
- 
 
 # Output : 
 
-![Screenshot 2024-12-07 132545](https://github.com/user-attachments/assets/c78f7735-6294-4518-8a4b-0a45e3ad0c07)
+![Screenshot 2025-05-14 134228](https://github.com/user-attachments/assets/af6ac858-f23f-49b0-9fa5-c52c3c10324a)
 
 
 # Results
